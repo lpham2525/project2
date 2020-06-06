@@ -1,3 +1,5 @@
+console.log('ping')
+
 const goToProductPage = (id) => {
   return axios.get(`/api/items/:${id}`)
 }
@@ -69,20 +71,18 @@ const loadCards = () => {
       })
     })
 
-  const loadFeatured = () => {
+const loadFeatured = () => {
     axios.get('/api/items/:id')
       .then(({ data }) => {
         document.getElementById('featured').innerHTML =
           `<img src="${item.productUrl}" alt="${item.title}" id="mainImg" max-width="1000" max-height="1000">
           <div class="right" id="nameBox">
             <p id="artistName">${item.artistName}}</p>
-            <p>Sale Ends:July 8, 2020 at 11:59:59 PM</p>
+            <p>Sale Ends:<iframe src="http://free.timeanddate.com/countdown/i7bfrksf/n840/cf111/cm0/cu4/ct0/cs0/ca0/co0/cr0/ss0/cac000/cpc000/pc66c/tc66c/fs100/szw192/szh81/iso2020-06-07T00:00:00" allowTransparency="true" frameborder="0" width="192" height="81"></iframe></p>
           </div> 
-         <a href="./artists/:${item.artistId}" class="prodLink">Visit product page</a>
-        </div>
-      </div>`
+         <a href="./artists/:${item.artistId}" class="prodLink">Visit product page</a>`
       })
   }
 
-loadCards()
-loadFeatured()
+window.onload = loadCards()
+window.onload = loadFeatured()
