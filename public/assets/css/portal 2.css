@@ -1,0 +1,19 @@
+.myNav {
+  background-color: #29b6f6;
+}
+
+.portal-header {
+  background-image: url("../assets/header-images/Bootjack\ steps\ BASE\ copy.jpeg");
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  clear: both;
+  float: initial;
+  color: white
+}
+
+.form-section {
+  padding: 10px;
+  outline-style: solid;
+  outline-width: thin;
+}

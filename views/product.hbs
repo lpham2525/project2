@@ -1,0 +1,106 @@
+<div class="fluid-container">
+  <header>
+    <!-- NavBar -->
+    <nav class="myNav">
+      <div class="parallax-container">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo left">ArtistaDay</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="">Home</a></li>
+            <li><a href="">Events</a></li>
+            <li class="active"><a href="">Products</a></li>
+            <li><a href="">Artist Portal</a></li>
+            <li><a href="">Cart</a></li>
+          </ul>
+        </div>
+    </nav>
+</div>
+</header>
+
+<!-- featured product -->
+<main>
+  <div class="row">
+    <div class="col s6 featured-product-image">
+      <a class="chocolat-image" href="" title="{{this.dataValues.title}}">Featured Product Image</a>
+    </div>
+
+    <div class="col s6">
+      <h3 class="featured-work-title">Artwork Title:{{this.dataValues.title}}</h3>
+      <h4 class="featured-work-artist">Artist Name: {{this.dataValues.artistName}}</h4>
+      <p class=timer>Ends in 5 hours</p>
+      <div class="featured-description-box">
+        <h5>THE ARTIST</h5>
+        <p>Artist Bio:{{this.dataValues.artistBio}}</p>
+        <h5>THE ARTWORK</h5>
+        <p>Artwork Description: </p>
+      </div>
+    </div>
+  </div>
+  <!-- end of featured product -->
+  <div class="divider"></div>
+  <div class="section">
+    <div class="row">
+      <h4>Additional Work by this Artist</h4>
+      <div class="col s4">
+        <div class="small card">
+          <div class="card-image">
+            <img src="{{this.dataValues.url}}">
+            <!-- <span class="card-title">Card Title</span> -->
+          </div>
+          <div class="card-content">
+            <p class="more-products-work-title">{{this.dataValues.title}}</p>
+
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn-small addBtn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="small card">
+          <div class="card-image">
+            <img
+              src="{{this.dataValues.url}}>
+            <!-- <span class="card-title">Card Title</span> -->
+          </div>
+          <div class="card-content">
+            <p class="more-products-work-title">{{this.dataValues.title}}</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn-small addBtn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="small card">
+          <div class="card-image">
+            <img src="{{this.dataValues.url}}">
+            <!-- <span class="card-title">Card Title</span> -->
+          </div>
+          <div class="card-content">
+            <p class="more-products-work-title">{{this.dataValues.title}}</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn-small addBtn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+
+<footer class="page-footer product-footer">
+  <div class="container">
+    <div class="row">
+      © 2020 Copyright ArtistaDay
+    </div>
+  </div>
+</footer>
+
+</div>

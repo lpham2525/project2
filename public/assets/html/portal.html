@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="dist/css/chocolat.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+  <div class="fluid-container">
+    <header>
+      <!-- NavBar -->
+      <nav class="myNav">
+        <div class="parallax-container">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo left">ArtistaDay</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="">Home</a></li>
+              <li><a href="">Events</a></li>
+              <li><a href="">Products</a></li>
+              <li class="active"><a href="">Artist Portal</a></li>
+              <li><a href="">Cart</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+     </header>
+<!-- end of nav bar -->
+<!-- banner image header -->
+<div id="index-banner" class="parallax-container portal-header">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center teal-text text-lighten-2">CREATED FOR ARTISTS JUST LIKE YOU</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Upload your work portfolio and start selling today!</h5>
+      </div>
+      <div class="row center">
+        <a href=" " id="download-button"
+          class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>
+
+<!-- form section -->
+    <div class="container">
+      <div class="divider"></div>
+        <div class="section">
+  
+    <div class="row">
+      <h3>Add Your Work</h3>
+      <div class="col s8 form-section">
+        <form action="" method="post" class="artist-form" id="artistForm">
+          <div>
+            <label for="file-upload">Please select a file-upload</label><br><br>
+            <input type="file" name="file" id="file"><br><br>
+          </div>
+          <p>
+            <label for="awtitle">Artwork Title:</label><br>
+          </p>
+            <input type="text" id="fname" name="fname"><br>
+          <div>
+            <button class="btn waves-effect waves-light" type="submit" name="action" data-id="{{ user.id }}">Submit
+              <i class="material-icons right">send</i>
+            </button><br><br>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end of form section -->
+    data-id="{{ user.id }}
+<!-- submit button -->
+<!-- when clicked from user experience perspective just a div that shows success or different view (doesn't redirect you) -->
+<!-- when submit is clicked send data to api -front -->
+<!-- container div below -->
+</div>
+
+
+</body>
+</html>

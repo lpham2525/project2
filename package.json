@@ -1,0 +1,30 @@
+{
+  "name": "ArtistaDay",
+  "version": "1.0.0",
+  "description": "------------------------------------------------------\r ArtistADay provides a curated shopping experience by featuring one independent artist a day in a timed sales event.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usrs/ArtistaDay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usrs/ArtistaDay/issues"
+  },
+  "homepage": "https://github.com/usrs/ArtistaDay#readme",
+  "dependencies": {
+    "chocolat": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "imgur": "^0.3.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.11"
+  }
+}
