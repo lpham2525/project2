@@ -70,22 +70,19 @@ const loadCards = () => {
     })
 
   const loadFeatured = () => {
-    axios.get('/api/artists/:id')
+    axios.get('/api/items/:id')
       .then(({ data }) => {
         document.getElementById('featured').innerHTML =
-        `<h1>${data.name}</h1>
-        data.items.forEach(item => {
-          let featuredElem = document.createElement('div')
-          featuredElem.innerHTML =
-            <img src="${document.getElementById('productUrl').value}" alt=""/>
-            <p class="more-products-work-title">Title:${document.getElementById('title').value}</p>
-              </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>`
-          document.getElementById('featured').append(featuredElem)
-        })
+          `<img src="${item.productUrl}" alt="${item.title}" id="mainImg" max-width="1000" max-height="1000">
+          <div class="right" id="nameBox">
+            <p id="artistName">${item.artistName}}</p>
+            <p>Sale Ends:July 8, 2020 at 11:59:59 PM</p>
+          </div> 
+         <a href="./artists/:${item.artistId}" class="prodLink">Visit product page</a>
+        </div>
+      </div>`
       })
   }
+
+loadCards()
+loadFeatured()

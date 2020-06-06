@@ -20,6 +20,10 @@ Item.init({
     type: DataTypes.INTEGER,
     allowNull: true
   },
+  artistName: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   artistId: {
     type: DataTypes.INTEGER,
     allowNull: false
