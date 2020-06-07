@@ -8,13 +8,15 @@
 
    .page-footer {
      background-color: #29b6f6;
+     padding-bottom: 8px;
+     font-size: large;
    }
 
    #featured {
      position: relative;
    }
 
-   #mainImg {
+   .mainImg {
      max-width: 1000px;
      max-height: 1000px;
    }
@@ -44,7 +46,7 @@
    }
 
    .prodLink {
-     float: right;
+     margin-top: 5px;
      font-size: 20px;
      background-color: aquamarine;
      padding: 10px;
@@ -61,6 +63,12 @@
    }
 
    @media screen and (max-width: 576px) {
+     .mainImg {
+       width: 150px;
+     }
+   }
+
+   @media screen and (max-width: 576px) {
      .container {
        width: 150px;
      }
@@ -68,6 +76,18 @@
 
    @media screen and (max-width: 768px) {
      .nav {
+       width: 150px;
+     }
+   }
+
+   @media screen and (max-width: 768px) {
+     .container {
+       width: 150px;
+     }
+   }
+
+   @media screen and (max-width: 768px) {
+     .mainImg {
        width: 150px;
      }
    }
