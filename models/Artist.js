@@ -17,6 +17,6 @@ Artist.init({
     allowNull: true
   }
 },
-{ sequelize, modelName: 'artist' })
+{ timestamps: false, sequelize, modelName: 'artist' })
 
 module.exports = Artist
