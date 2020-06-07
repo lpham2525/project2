@@ -2,12 +2,12 @@ const router = require('express').Router()
 const { Artist, Item } = require('../models')
 
 router.get('/', (req, res) => {
-  res.sendFile('../public/assets/html/index.html')
+  res.sendFile('../public/index.html')
 })
 
 router.get('/dashboard/:id', (req, res) => {
   Artist.findOne({ id: req.params.id, include: [Item] })
-    .then((user) => {
+    .then((artist) => {
       res.render('dashboard', { artist: artist.dataValues })
     })
     .catch((err) => console.error(err))
