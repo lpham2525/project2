@@ -2,44 +2,33 @@ const router = require('express').Router()
 const { join } = require('path')
 const { Artist, Item } = require('../models')
 
-// router.get('/', function (req, res) {
-//   Artist.findAll({
-//     include: [Item]
-//   }).then(function (artists) {
-//     res.render('home', {
-//       title: 'Artist A Day',
-//       artists: artists
-//     })
-//   })
-// })
-
 router.get('/', (req, res) => {
   res.sendFile(join(__dirname, '/../public/assets/html/home.html'))
 })
 
-router.get('/dashboard/:id', (req, res) => {
+router.get('/artists/:id', (req, res) => {
   Artist.findOne({ id: req.params.id, include: [Item] })
     .then((artist) => {
-      res.render('dashboard', { artist: artist.dataValues })
+      res.sendFile('dashboard', { artist: artist.dataValues })
     })
     .catch((err) => console.error(err))
 })
 
 router.get('/dashboard', (req, res) => {
-  res.sendFile('public/assets/html/dashboard.html')
+  res.sendFile(join(__dirname, '/../../project2/public/assets/html/dashboard.html'))
 })
 
 router.get('artists/:id', (req, res) => {
   Artist.findOne({ id: req.params.id, include: [Item] })
     .then(artist => {
-      res.render('artists', { artist: artist.dataValues })
+      res.sendFile(join(__dirname, '/../../project2/public/assets/html/artistportal.html'))
     })
     .catch(err => console.error(err))
 })
 
 router.get('/artists', (req, res) => {
   Artist.findAll(artists => {
-    res.render('artists', { artists })
+    res.sendFile(join(__dirname, '/../../project2/public/assets/html/dashboard.html'))
   })
 })
 
