@@ -5,12 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body{
+    text-align: center;
+    background-image: url("https://wallpapercave.com/wp/njHhZgk.jpg")
+    }
+  </style>
 </head>
 
 <body>
   <h1>Dashboard</h1>
   <form id="imageUpload" action="/dashboard" method="POST" enctype=multipart/form-data>
     <input type="file" name="photo" />
+    <br>
+    <br>
     <button type="submit">Submit</button>
   </form>
   <script type="text/javascript" src="./assets/js/dashboard.js"></script>

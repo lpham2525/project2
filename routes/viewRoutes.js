@@ -1,13 +1,21 @@
 const router = require('express').Router()
-const { Artist, Item, Event } = require('../models')
+const { Artist, Item } = require('../models')
 
 router.get('/', (req, res) => {
-  res.render('home')
+  res.sendFile('../public/assets/html/index.html')
 })
 
-// router.get('/', (req, res) => {
-//   res.render('home', { artistId: req.params.id, include: [Item[0]] })
-// })
+router.get('/dashboard/:id', (req, res) => {
+  Artist.findOne({ id: req.params.id, include: [Item] })
+    .then((user) => {
+      res.render('dashboard', { artist: artist.dataValues })
+    })
+    .catch((err) => console.error(err))
+})
+
+router.get('/dashboard', (req, res) => {
+  res.sendFile('public/assets/html/dashboard.html')
+})
 
 router.get('artists/:id', (req, res) => {
   Artist.findOne({ id: req.params.id, include: [Item] })
@@ -34,20 +42,6 @@ router.get('items/:id', (req, res) => {
 router.get('/items', (req, res) => {
   Item.findAll(items => {
     res.render('items', { items })
-  })
-})
-
-router.get('events/:id', (req, res) => {
-  Event.findOne({ id: req.params.id, include: [Artist] })
-    .then(event => {
-      res.render('events', { event: event.dataValues })
-    })
-    .catch(err => console.error(err))
-})
-
-router.get('/events', (req, res) => {
-  Event.getEvents(events => {
-    res.findAll('events', { events })
   })
 })
 
