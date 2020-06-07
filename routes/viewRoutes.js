@@ -1,8 +1,20 @@
 const router = require('express').Router()
+const { join } = require('path')
 const { Artist, Item } = require('../models')
 
+// router.get('/', function (req, res) {
+//   Artist.findAll({
+//     include: [Item]
+//   }).then(function (artists) {
+//     res.render('home', {
+//       title: 'Artist A Day',
+//       artists: artists
+//     })
+//   })
+// })
+
 router.get('/', (req, res) => {
-  res.sendFile('../public/index.html')
+  res.sendFile(join(__dirname, '/../public/assets/html/home.html'))
 })
 
 router.get('/dashboard/:id', (req, res) => {

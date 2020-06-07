@@ -16,6 +16,7 @@ Artist.init({
     type: DataTypes.TEXT,
     allowNull: true
   }
-}, { sequelize, modelName: 'artist' })
+},
+{ sequelize, modelName: 'artist' })
 
 module.exports = Artist

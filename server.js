@@ -11,7 +11,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }))
 app.use(require('./routes'))
 
 // app.get('/dashboard', (req, res) => {
-//   res.sendFile(__dirname + '/public/dashboard.html')
+//   res.sendFile(join(__dirname, '/public/dashboard.html'))
 // })
 
 // app.post("/dashboard", (req, res) => {
@@ -49,6 +49,6 @@ require('./db')
 
 // app.use(require('./routes'))
 
-// app.get('/', function (req, res) {
-//   res.render('home')
-// })
+app.get('/', function (req, res) {
+  res.render('home')
+})
