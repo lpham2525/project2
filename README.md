@@ -1,9 +1,9 @@
 # Artist A Day
 ------------------------------------------------------
-Screenshot of Featured Artist of the Day
+
 ![Featured Artist](./assets/screenshots/featured.png?raw=true "Star Wars")
 --------------------------------------------------------
-Screenshot of Artist Cards 
+
 ![Featured Artist](./assets/screenshots/ArtistCards.png?raw=true "Sharon Stone, Angelica Huston, and Diane Lane")
 --------------------------------------------------------
 # Problem
