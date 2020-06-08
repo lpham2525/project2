@@ -20,10 +20,10 @@ Item.init({
     type: DataTypes.INTEGER,
     allowNull: true
   },
-  artistName: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
+  // artistName: {
+  //   type: DataTypes.STRING,
+  //   allowNull: true
+  // },
   artistId: {
     type: DataTypes.INTEGER,
     allowNull: false
@@ -32,6 +32,6 @@ Item.init({
     type: DataTypes.INTEGER,
     allowNull: true
   }
-}, { sequelize, modelName: 'item' })
+}, { timestamps: false, sequelize, modelName: 'item' })
 
 module.exports = Item

@@ -42,7 +42,7 @@ router.get('items/:id', (req, res) => {
 
 router.get('/items', (req, res) => {
   Item.findAll(items => {
-    res.render('items', { items })
+    res.sendFile(join(__dirname, '/../../project2/public/assets/html/product.html'))
   })
 })
 
