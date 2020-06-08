@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="dist/css/chocolat.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+  <div class="row center">
+    <div class="col s12 login-header-section">
+      <h1>ArtistaDay</h1>
+      <h5>Created for artists like you.</h5>
+    </div>
+  </div>
+  <div class="row center">
+    <div class="col s6">
+      <form action="" method="post" class="login-form" id="loginForm">
+        <p>
+          <label for="artistName">Name:</label><br>
+        </p>
+        <input type="text" id="artistName" name="aname"><br>
+        <div>
+          <button class="btn waves-effect waves-light" type="submit" name="action" id="login"
+            data-id="{{user.id}}">Login</a>
+          </button><br><br>
+        </div>
+      </form>
+
+    </div>
+    <div class="col s6">
+      <form action="" method="post" class="register-form" id="registerForm">
+        <p>
+          <label for="artistName">Name:</label><br>
+        </p>
+        <input type="text" id="artistName" name="aname"><br>
+        <div>
+          <button class="btn waves-effect waves-light" type="submit" name="action" id="register"
+            data-id="{{user.id}}">Register</a>
+          </button><br><br>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+<script src="./assets/js/login.js"></script>
+
+</html>

@@ -22,7 +22,7 @@ Item.init({
   },
   // artistName: {
   //   type: DataTypes.STRING,
-  //   allowNull: true
+  //   allowNull: false
   // },
   artistId: {
     type: DataTypes.INTEGER,
@@ -32,6 +32,6 @@ Item.init({
     type: DataTypes.INTEGER,
     allowNull: true
   }
-}, { timestamps: false, sequelize, modelName: 'item' })
+}, { sequelize, modelName: 'item' })
 
 module.exports = Item
