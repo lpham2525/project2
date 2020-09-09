@@ -85,5 +85,16 @@ const loadFeatured = () => {
     })
 }
 
+const showTimes = () =>  {
+  const now = new Date()
+  const mins = 59 - now.getMinutes()
+  const hrs = 23 - now.getHours()
+  const secs = 59 - now.getSeconds()
+  let str = ''
+  str += hrs + ': ' + mins + ': ' + secs
+  document.getElementById('timer').innerHTML = str
+}
+
 window.onload = loadCards()
 window.onload = loadFeatured()
+window.onload = showTimes()
