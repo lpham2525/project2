@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 document.getElementById('addArtist').addEventListener('click', event => {
   event.preventDefault()
 

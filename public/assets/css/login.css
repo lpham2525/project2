@@ -1,7 +1,3 @@
-.myNav {
-  background-color: #29b6f6;
-}
-
 .featured-description-box {
   padding: 10px;
   outline-style: solid;
@@ -12,10 +8,15 @@
   height: 600px;
   width: 700px;
   padding-top: 5px;
-  
-
 }
- .product-footer {
-  background-color: #29b6f6;
-  padding-bottom: 20px;
+
+.page-footer {
+  width: 100%;
+  padding-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+  margin-top: 20px;
 }
