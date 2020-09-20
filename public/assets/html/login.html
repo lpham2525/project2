@@ -32,9 +32,9 @@
     <div class="col s6">
       <form action="" method="post" class="login-form" id="loginForm">
         <p>
-          <label for="artistName">Name:</label><br>
+          <label for="artistName" class='labelName'>Name:</label><br>
         </p>
-        <input type="text" id="artistName" name="name"><br>
+        <input type="text" id='loginName' name="name"><br>
         <div>
           <button class="btn waves-effect waves-light" type="submit" name="action" id="login"
             data-id="{{user.id}}">Login</a>
@@ -46,9 +46,9 @@
     <div class="col s6">
       <form action="" method="post" class="register-form" id="registerForm">
         <p>
-          <label for="artistName">Name:</label><br>
+          <label for="artistName" class='labelName'>Name:</label><br>
         </p>
-        <input type="text" id="artistName" name="aname"><br>
+        <input type="text" id='registerName' name="name"><br>
         <div>
           <button class="btn waves-effect waves-light" type="submit" name="action" id="register"
             data-id="{{user.id}}">Register</a>
@@ -59,17 +59,17 @@
     </div>
   </div>
     <footer class="page-footer product-footer">
-      <div class="container">
-        <div class="row">
+    
+  
           © 2020 Copyright ArtistADay
-        </div>
-      </div>
+       
+     
     </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
-<script src="./assets/js/login.js"></script>
+<script src="../js/login.js"></script>
 </body>
 </html>
