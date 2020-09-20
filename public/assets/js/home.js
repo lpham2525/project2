@@ -1,4 +1,4 @@
-console.log('ping')
+const axios = require('axios')
 
 const goToProductPage = (id) => {
   return axios.get(`/api/items/:${id}`)
@@ -52,7 +52,7 @@ const loadCards = () => {
   axios.get('/api/artists')
     .then(({ data }) => {
       data.artists.forEach(artist => {
-        let artistElem = document.createElement('div')
+        const artistElem = document.createElement('div')
         artistElem.innerHTML =
           `<div class="col s3">
             <div class="card medium">
@@ -70,29 +70,34 @@ const loadCards = () => {
         document.getElementById('recentArt').append(artistElem)
       })
     })
+    .catch(e => console.error(e))
 }
 
 const loadFeatured = () => {
   axios.get('/api/items/:id')
     .then(({ data }) => {
-      document.getElementById('featured').innerHTML =
+      console.log(data)
+      data.item.forEach(item => {
+        document.getElementById('featured').innerHTML =
           `<img src="${item.productUrl}" alt="${item.title}" id="mainImg" max-width="1000" max-height="1000">
           <div class="right" id="nameBox">
-            <p id="artistName">${item.artistName}}</p>
-            <p>Sale Ends:<iframe src="http://free.timeanddate.com/countdown/i7bfrksf/n840/cf111/cm0/cu4/ct0/cs0/ca0/co0/cr0/ss0/cac000/cpc000/pc66c/tc66c/fs100/szw192/szh81/iso2020-06-07T00:00:00" allowTransparency="true" frameborder="0" width="192" height="81"></iframe></p>
+            <p id="artistName">${item.artistName}</p>
+            <p>Sale Ends In:</p>
           </div> 
-         <a href="./artists/:${item.artistId}" class="prodLink">Visit product page</a>`
+        <a href="./artists/:${item.artistId}" class="prodLink">Visit product page</a>`
+      })
     })
+    .catch(e => console.error(e))
 }
 
-const showTimes = () =>  {
+const showTimes = () => {
   const now = new Date()
   const mins = 59 - now.getMinutes()
   const hrs = 23 - now.getHours()
   const secs = 59 - now.getSeconds()
   let str = ''
   str += hrs + ': ' + mins + ': ' + secs
-  document.getElementById('timer').innerHTML = str
+  document.getElementById('timer').innerHTML = 'Sale Ends In: ' + str
 }
 
 window.onload = loadCards()
