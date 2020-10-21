@@ -29,10 +29,26 @@
     </div>
   </div>
   <div class="row center">
+        <div class="col s6">
+          <form action="" method="post" class="register-form" id="registerForm">
+            <h3>New Users</h3>
+            <p>
+              <label for="artistName" class='labelName'>Username:</label><br>
+            </p>
+            <input type="text" id='registerName' name="name"><br>
+            <div>
+              <button class="btn waves-effect waves-light" type="submit" name="action" id="register"
+                data-id="{{user.id}}">Register</a>
+              </button><br><br>
+            </div>
+          </form>
+        
+        </div>
     <div class="col s6">
       <form action="" method="post" class="login-form" id="loginForm">
+        <h3>Returning Users</h3>
         <p>
-          <label for="artistName" class='labelName'>Name:</label><br>
+          <label for="artistName" class='labelName'>Username:</label><br>
         </p>
         <input type="text" id='loginName' name="name"><br>
         <div>
@@ -43,27 +59,10 @@
       </form>
 
     </div>
-    <div class="col s6">
-      <form action="" method="post" class="register-form" id="registerForm">
-        <p>
-          <label for="artistName" class='labelName'>Name:</label><br>
-        </p>
-        <input type="text" id='registerName' name="name"><br>
-        <div>
-          <button class="btn waves-effect waves-light" type="submit" name="action" id="register"
-            data-id="{{user.id}}">Register</a>
-          </button><br><br>
-        </div>
-      </form>
 
-    </div>
   </div>
-    <footer class="page-footer product-footer">
-    
-  
+    <footer class="page-footer product-footer"> 
           © 2020 Copyright ArtistADay
-       
-     
     </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
