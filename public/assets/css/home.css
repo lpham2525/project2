@@ -52,9 +52,9 @@
      padding: 10px;
    }
 
-   #artistName {
-     font-size: 20px;
-   }
+  #artistName {
+    font-size: 20px;
+  }
 
    @media screen and (max-width: 576px) {
      .nav {

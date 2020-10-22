@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const { join } = require('path')
-const imgur = require('imgur')
+// const imgur = require('imgur')
 const app = express()
 
 app.use(express.static(join(__dirname, '/public/')))
