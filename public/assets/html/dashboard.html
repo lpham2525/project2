@@ -15,7 +15,7 @@
   font-size: 20px;
   text-align: center;
   position: absolute;
-  bottom: 0;
+  bottom: -450px;
 }
   </style>
 </head>
@@ -52,7 +52,39 @@
     </div>
   </div>
 
+  <!-- form section -->
+  <div class="container">
   
+    <div class="section">
+  
+      <div class="row">
+        <h3>Add Your Work</h3>
+        <div class="col s8 form-section">
+          <form action="" method="post" class="artist-form" id="artistForm">
+            <div>
+              <label for="file-upload">Please select a file-upload</label><br><br>
+              <input type="file" name="file" id="file"><br><br>
+            </div>
+            <p>
+              <label for="awtitle">Artwork Title:</label><br>
+            </p>
+            <input type="text" id="fname" name="fname"><br>
+            <div>
+              <button class="btn waves-effect waves-light" type="submit" name="action" data-id="{{ user.id }}">Submit
+              </button><br><br>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- end of form section -->
+  
+      <!-- submit button -->
+      <!-- when clicked from user experience perspective just a div that shows success or different view (doesn't redirect you) -->
+      <!-- when submit is clicked send data to api -front -->
+      <!-- container div below -->
+    </div>
+  </div>
+
   <footer class="page-footer product-footer">
     <div class="container">
       <div class="row">

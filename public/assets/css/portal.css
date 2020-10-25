@@ -1,3 +1,7 @@
+body{
+  margin-left: 0px;
+}
+
 .portal-header {
   background-image: url("../assets/header-images/Bootjack\ steps\ BASE\ copy.jpeg");
   height: 500px;
