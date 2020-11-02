@@ -9,7 +9,7 @@ router.get('/users', (req, res) => {
 })
 
 // GET one user
-router.get('/users/:id', (req, res) => {
+router.get('/users/:username', (req, res) => {
   User.findOne({ id: req.params.id })
     .then(user => res.json(user))
     .catch(err => console.error(err))
