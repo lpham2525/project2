@@ -54,7 +54,7 @@ router.get('/product', (req, res) => {
   res.sendFile(join(__dirname, '../public/assets/html/product.html'))
 })
 
-router.get('/api/login', (req, res) => {
+router.get('/login', (req, res) => {
   res.sendFile(join(__dirname, '../public/assets/html/login.html'))
 })
 

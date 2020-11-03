@@ -9,8 +9,8 @@ router.get('/users', (req, res) => {
 })
 
 // GET one user
-router.get('/users/:username', (req, res) => {
-  User.findOne({ id: req.params.id })
+router.get('/users/:id', (req, res) => {
+  User.findOne({ where: { id: req.params.id } })
     .then(user => res.json(user))
     .catch(err => console.error(err))
 })
@@ -18,7 +18,7 @@ router.get('/users/:username', (req, res) => {
 // POST one user
 router.post('/users', (req, res) => {
   User.create(req.body)
-    .then(() => res.sendStatus(200))
+    .then(user => res.json(user))
     .catch(err => console.error(err))
 })
 
@@ -33,6 +33,13 @@ router.put('/users/:id', (req, res) => {
 router.delete('/users/:id', (req, res) => {
   User.destroy({ where: { id: req.params.id } })
     .then(() => res.sendStatus(200))
+    .catch(err => console.error(err))
+})
+
+// Log in user
+router.get('/login/:name', (req, res) => {
+  User.findOne({ where: { name: req.params.name } })
+    .then(user => res.json(user))
     .catch(err => console.error(err))
 })
 
