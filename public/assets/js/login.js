@@ -25,7 +25,7 @@ document.getElementById('register').addEventListener('click', event => {
     username: document.getElementById('registerName').value
   })
     .then(({ data }) => {
-      localStorage.setItem('user', data.insertId)
+      localStorage.setItem('user', data.id)
       window.location.replace('/dashboard')
     })
     .catch(err => console.error(err))
