@@ -1,15 +1,30 @@
-body{
-  margin-left: 0px;
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  flex-shrink: 0;
+  font-size: 20px;
+  text-align: center;
 }
 
 .portal-header {
-  background-image: url("../assets/header-images/Bootjack\ steps\ BASE\ copy.jpeg");
-  height: 500px;
+  background-image: url("../../../assets/header-images/Bootjack\ steps\ BASE\ copy\ 2.jpeg");
+  height: 1000px;
   background-position: center;
   background-size: cover;
   clear: both;
   float: initial;
-  color: white
+  color: white;
 }
 
 .form-section {
@@ -18,11 +33,16 @@ body{
   outline-width: thin;
 }
 
-.page-footer {
+.woods {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* .page-footer {
   width: 100%;
   font-size: 20px;
   text-align: center;
   position: absolute;
   bottom: -350px;
-}
-
+} */
