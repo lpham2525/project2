@@ -53,7 +53,7 @@
         <div class="form-section">
           <form action="" method="post" class="artist-form" id="artistForm">
             <div>
-              <label for="file-upload">Please select a file to upload</label><br><br>
+              <label for="file-upload" class='upload'>Please select a file to upload</label><br><br>
               <input type="file" name="file" id="file"><br><br>
             </div>
             <p>
@@ -61,9 +61,11 @@
             </p>
             <input type="text" id="fname" name="fname"><br>
             <div>
+              <p>
               <button class="btn waves-effect waves-light" type="submit" name="action" data-id="{{ user.id }}">Submit
                 <i class="material-icons right">send</i>
-              </button><br><br>
+              </button><br>
+              </p>
             </div>
           </form>
         </div>

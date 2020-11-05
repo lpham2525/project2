@@ -11,6 +11,10 @@ body {
   flex: 1 0 auto;
 }
 
+.upload {
+  font-size: 20px;
+}
+
 .page-footer {
   flex-shrink: 0;
   font-size: 20px;
