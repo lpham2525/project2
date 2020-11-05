@@ -8,10 +8,10 @@ document.getElementById('imageUpload').addEventListener('submit', function (even
     console.log(reader.result) // submit the file to the server
     fetch('/dashboard', {
       method: 'POST', headers: {
-        Accept: 'application/json', 'Content-Type': 'application/json',
+        Accept: 'application/json', 'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        photo: reader.result,
+        photo: reader.result
       }
       )
     }
