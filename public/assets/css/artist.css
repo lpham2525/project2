@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.bio {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: aquamarine;
+  padding: 10px;
+  outline-style: solid;
+  outline-width: thick;
+}
+
+.page-footer {
+  flex-shrink: 0;
+  font-size: 20px;
+  text-align: center;
+}

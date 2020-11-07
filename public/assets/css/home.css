@@ -132,11 +132,3 @@
        width: 100%;
      }
    }
-
-   .success {
-     background-color: rgb(50, 184, 50);
-   }
-
-   .error {
-     background-color: red;
-   }
