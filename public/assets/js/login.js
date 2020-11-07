@@ -13,6 +13,7 @@ document.getElementById('login').addEventListener('click', event => {
   event.preventDefault()
   axios.get(`api/login/${document.getElementById('loginName').value}`)
     .then(({ data }) => {
+      console.log(data)
       localStorage.setItem('user', data.user.id)
       window.location.replace('/dashboard')
     })
@@ -21,10 +22,11 @@ document.getElementById('login').addEventListener('click', event => {
 
 document.getElementById('register').addEventListener('click', event => {
   event.preventDefault()
-  axios.post('/api/login', {
+  axios.post('/api/users', {
     username: document.getElementById('registerName').value
   })
     .then(({ data }) => {
+      console.log(data)
       localStorage.setItem('user', data.id)
       window.location.replace('/dashboard')
     })
