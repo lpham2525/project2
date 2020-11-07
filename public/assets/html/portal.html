@@ -80,6 +80,37 @@
     </div>
   </div>
 
+  <div class="container uploadArt">
+    <h2 class="center-align">Upload Artwork</h2>
+    <div class="col s8 form-section" id="addItems">
+      <form action="/imgur" method="post" class="artist-form" id="addItemForm">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>File</span>
+            <input type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" id="imgPath" name="imgPath">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="artworkTitle" type="text" name="name" class="validate">
+            <label for="name">Artwork Name</label>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <button class="btn waves-effect waves-light" id="upload" type="submit" name="action" action="/imgur"
+                method="POST"><i class="material-icons">Submit Image</i>
+              </button><br><br>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
   <footer class="page-footer product-footer">
     <div class="container">
       <div class="row">

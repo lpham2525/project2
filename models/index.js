@@ -3,7 +3,7 @@ const Event = require('./Event.js')
 const Item = require('./Item.js')
 const User = require('./User.js')
 
-Artist.hasMany(Item)
+Artist.hasMany(Item, { targetKey: 'userId', foreignKey: 'userId' })
 Event.belongsTo(Artist)
 Item.belongsTo(Artist)
 User.hasMany(Item)

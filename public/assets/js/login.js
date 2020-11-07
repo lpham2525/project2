@@ -1,6 +1,6 @@
 const checkUser = () => {
   if (localStorage.getItem('user')) {
-    axios.get(`/api/users/${localStorage.getItem('user')}`)
+    axios.get(`/api/login/${localStorage.getItem('user')}`)
       .then(({ data }) => {
         localStorage.setItem('user', data.user.id)
         window.location.replace('/dashboard')
@@ -21,7 +21,7 @@ document.getElementById('login').addEventListener('click', event => {
 
 document.getElementById('register').addEventListener('click', event => {
   event.preventDefault()
-  axios.post('/api/users', {
+  axios.post('/api/login', {
     username: document.getElementById('registerName').value
   })
     .then(({ data }) => {
