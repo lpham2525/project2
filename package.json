@@ -1,5 +1,5 @@
 {
-  "name": "ArtistaDay",
+  "name": "ArtistADay",
   "version": "1.0.0",
   "description": "------------------------------------------------------\r ArtistADay provides a curated shopping experience by featuring one independent artist a day in a timed sales event.",
   "main": "server.js",
