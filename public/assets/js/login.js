@@ -28,7 +28,6 @@ document.getElementById('register').addEventListener('click', event => {
     .then(({ data }) => {
       console.log(data)
       localStorage.setItem('user', data.id)
-      res.redirect('/dashboard')
     })
     .catch(err => console.error(err))
 })

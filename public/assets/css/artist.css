@@ -12,6 +12,12 @@ body {
   flex: 1 0 auto;
 }
 
+.page-footer {
+  flex-shrink: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
 .bio {
   margin-left: auto;
   margin-right: auto;
@@ -20,10 +26,4 @@ body {
   padding: 10px;
   outline-style: solid;
   outline-width: thick;
-}
-
-.page-footer {
-  flex-shrink: 0;
-  font-size: 20px;
-  text-align: center;
 }

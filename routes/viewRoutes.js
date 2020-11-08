@@ -3,13 +3,13 @@ const { join } = require('path')
 const { Artist, Item } = require('../models')
 const isLogin = false
 
-router.get('/', (req, res) => {
-  res.sendFile(join(__dirname, '/../public/assets/html/home.html'))
+router.get('/home', (req, res) => {
+  res.sendFile(join(__dirname, '/../../project2/public/assets/html/index.html'))
 })
 
-router.get('/dashboard', (req, res) => {
-  res.sendFile(join(__dirname, '/../../project2/public/assets/html/dashboard.html'))
-})
+// router.get('/dashboard', (req, res) => {
+//   res.sendFile(join(__dirname, '/../../project2/public/assets/html/dashboard.html'))
+// })
 
 router.get('artists/:id', (req, res) => {
   Artist.findOne({ id: req.params.id, include: [Item] })
@@ -39,13 +39,6 @@ router.get('/items', (req, res) => {
   })
 })
 
-router.get('/', (req, res) => {
-  // if(!isLogin)
-  res.sendFile(join(__dirname, '../public/home.html'))
-  // else
-  // res.sendFile(join(__dirname, '../public/profile.html'))
-})
-
 router.get('/event', (req, res) => {
   res.sendFile(join(__dirname, '../public/assets/html/event.html'))
 })
@@ -61,9 +54,9 @@ router.get('/api/login', (req, res) => {
 router.get('/dashboard', (req, res) => {
   console.log(req.body)
   if (isLogin === true) {
-    res.sendFile(join(__dirname, '../public/dashboard.html'))
+    res.sendFile(join(__dirname, '../public/assets/html/dashboard.html'))
   } else {
-    res.sendFile(join(__dirname, '../public/login.html'))
+    res.sendFile(join(__dirname, '../public/assets/html/login.html'))
   }
 })
 

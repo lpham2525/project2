@@ -45,4 +45,12 @@ router.get('/login/:username', (req, res) => {
     .catch(err => console.error(err))
 })
 
+// Register user
+router.post('/login', (req, res) => {
+  console.log(req.body)
+  User.create(req.body)
+    .then(user => res.redirect('/dashboard'))
+    .catch(err => console.error(err))
+})
+
 module.exports = router
