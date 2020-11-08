@@ -17,7 +17,9 @@ router.get('/users/:id', (req, res) => {
 
 // POST one user
 router.post('/users', (req, res) => {
+  console.log(req.body)
   User.create(req.body)
+    .then(user => console.log(user))
     .then(user => res.json(user))
     .catch(err => console.error(err))
 })
@@ -37,8 +39,8 @@ router.delete('/users/:id', (req, res) => {
 })
 
 // Log in user
-router.get('/login/:name', (req, res) => {
-  User.findOne({ where: { name: req.params.name } })
+router.get('/login/:username', (req, res) => {
+  User.findOne({ where: { username: req.params.username } })
     .then(user => res.json(user))
     .catch(err => console.error(err))
 })

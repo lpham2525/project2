@@ -3,8 +3,10 @@ const { User } = require('../models')
 
 // POST one user
 router.post('/login', (req, res) => {
+  console.log(req.body)
   User.create(req.body)
-    .then(user => res.json(user))
+    .then(user => res.redirect('/dashboard'))
+
     .catch(err => console.error(err))
 })
 
