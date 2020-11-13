@@ -22,13 +22,14 @@
         </ul>
       </div>
     </nav>
-  <div class="row center">
+  <div class="row center content">
     <div class="col s12 login-header-section">
       <h1>ArtistADay</h1>
       <h5>Created for artists like you.</h5>
     </div>
   </div>
-  <div class="row center">
+
+  <div class="row center content">
         <div class="col s6">
           <form action="" method="post" class="register-form" id="registerForm">
             <h3>New Users</h3>
@@ -42,28 +43,34 @@
               </button><br><br>
             </div>
           </form>
-        
+          <div id="registerAlert"></div>     
         </div>
+
     <div class="col s6">
       <form action="" method="post" class="login-form" id="loginForm">
         <h3>Returning Users</h3>
         <p>
           <label for="artistName" class='labelName'>Username:</label><br>
         </p>
-        <input type="text" id='loginName' name="loginName"><br>
+        <input type="text" id='loginName' name="username"><br>
         <div>
           <button class="btn waves-effect waves-light" type="submit" name="action" id="login"
             data-id="{{user.id}}">Login</a>
           </button><br><br>
         </div>
       </form>
-
     </div>
-
   </div>
-    <footer class="page-footer product-footer"> 
-          © 2020 Copyright ArtistADay
-    </footer>
+        
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">© 2020 ArtistADay</h5>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="

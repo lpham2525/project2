@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const { User } = require('../models')
+let isLogin = false
 
 // GET all users
 router.get('/users', (req, res) => {
@@ -39,7 +40,10 @@ router.delete('/users/:id', (req, res) => {
 // Log in user
 router.get('/login/:username', (req, res) => {
   User.findOne({ where: { username: req.params.username } })
-    .then(user => res.json(user))
+    .then(user => {
+      isLogin === true
+      res.redirect('/dashboard')
+    })
     .catch(err => console.error(err))
 })
 
