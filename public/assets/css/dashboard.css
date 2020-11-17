@@ -1,10 +1,25 @@
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  text-align: center;
-}
+ html, body {
+   height: 100%;
+ }
 
-main {
-  flex: 1 0 auto;
-}
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   text-align: center;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+ .content {
+   flex: 1 0 auto;
+ }
+
+ .page-footer {
+   flex-shrink: 0;
+   font-size: 20px;
+   text-align: center;
+   bottom: 0;
+ }

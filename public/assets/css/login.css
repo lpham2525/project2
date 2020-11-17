@@ -22,12 +22,6 @@
   font-size: 20px;
 }
 
-/* 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 .content {
   flex: 1 0 auto;
 }
@@ -36,7 +30,7 @@ body {
   flex-shrink: 0;
   font-size: 20px;
   text-align: center;
-} */
+}
 
 body {
   display: flex;

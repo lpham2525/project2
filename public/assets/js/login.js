@@ -1,3 +1,5 @@
+const axios = require('axios')
+const localStorage = require('localStorage')
 let isLogin = false
 
 const checkUser = () => {
@@ -30,28 +32,21 @@ document.getElementById('register').addEventListener('click', event => {
     document.getElementById('registerAlert').style.display = 'block'
     document.getElementById('registerAlert').textContent = 'Please type in a username.'
   } else {
-    axios.get('/api/users')
+    // Create a new user!
+    axios.post('/api/users/create', { username: document.getElementById('registerName').value })
       .then(({ data }) => {
-        let userInDb
-        for (i = 0; i < data.length; i++) {
-          userInDb = document.getElementById('registerName').value === data[i].username ? true : false
-        }
-        if (userInDb) {
-          document.getElementById('registerAlert').style.display = 'block'
-          document.getElementById('registerAlert').textContent = 'Username is already taken. Please choose another.'
+        isLogin = true
+        console.log(data)
+        localStorage.setItem('user', data.user.id)
+        window.location.replace('/dashboard')
+      })
+      .catch(err => {
+        if (err.response === 409) {
+          console.log('USER ALREADY EXISTS')
         } else {
-          axios.post('/api/users', {
-            username: document.getElementById('registerName').value
-          })
-            .then(({ data }) => {
-              localStorage.setItem('user', data.id)
-              isLogin = true
-              window.location.replace = '/dashboard'
-            })
-            .catch(err => console.error(err))
+          console.error(err)
         }
       })
-      .catch(err => console.log(err))
   }
 })
 

@@ -1,26 +1,19 @@
 const router = require('express').Router()
 const { User } = require('../models')
-let isLogin = false
+const isLogin = false
 
-// GET all users
-router.get('/users', (req, res) => {
-  User.findAll()
-    .then(users => res.json(users))
-    .catch(err => console.error(err))
-})
-
-// GET one user
-router.get('/users/:id', (req, res) => {
-  User.findOne({ where: { id: req.params.id } })
-    .then(user => res.json(user))
-    .catch(err => console.error(err))
-})
-
-// POST one user
-router.post('/users', (req, res) => {
+// Register a new user, throwing an error if it exists already
+router.post('/users/create', (req, res) => {
   User.create(req.body)
     .then(user => res.json(user))
-    .catch(err => console.error(err))
+    .catch(err => {
+      if (err.name === 'SequelizeUniqueConstraintError') {
+        res.status(409).send('User already exists')
+      } else {
+        res.status(500).send('Server had something go wrong')
+      }
+      console.error(err)
+    })
 })
 
 // PUT one user

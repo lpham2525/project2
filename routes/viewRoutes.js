@@ -7,9 +7,9 @@ router.get('/home', (req, res) => {
   res.sendFile(join(__dirname, '/../../project2/public/assets/html/index.html'))
 })
 
-// router.get('/dashboard', (req, res) => {
-//   res.sendFile(join(__dirname, '/../../project2/public/assets/html/dashboard.html'))
-// })
+router.get('/dashboard', (req, res) => {
+  res.sendFile(join(__dirname, '/../../project2/public/assets/html/dashboard.html'))
+})
 
 router.get('artists/:id', (req, res) => {
   Artist.findOne({ id: req.params.id, include: [Item] })
@@ -51,13 +51,13 @@ router.get('/api/login', (req, res) => {
   res.sendFile(join(__dirname, '../public/assets/html/login.html'))
 })
 
-router.get('/dashboard', (req, res) => {
-  console.log(req.body)
-  if (isLogin === true) {
-    res.sendFile(join(__dirname, '../public/assets/html/dashboard.html'))
-  } else {
-    res.sendFile(join(__dirname, '../public/assets/html/login.html'))
-  }
-})
+// router.get('/dashboard', (req, res) => {
+//   console.log(req.body)
+//   if (isLogin === true) {
+//     res.sendFile(join(__dirname, '../public/assets/html/dashboard.html'))
+//   } else {
+//     res.sendFile(join(__dirname, '../public/assets/html/login.html'))
+//   }
+// })
 
 module.exports = router
