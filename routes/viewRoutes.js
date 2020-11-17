@@ -4,7 +4,7 @@ const { Artist, Item } = require('../models')
 const isLogin = false
 
 router.get('/home', (req, res) => {
-  res.sendFile(join(__dirname, '/../../project2/public/assets/html/index.html'))
+  res.sendFile(join(__dirname, '/../../project2/public/assets/html/home.html'))
 })
 
 router.get('/dashboard', (req, res) => {
