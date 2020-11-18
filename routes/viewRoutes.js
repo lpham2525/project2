@@ -1,13 +1,18 @@
 const router = require('express').Router()
 const { join } = require('path')
-const { Artist, Item } = require('../models')
+// const { Artist, Item } = require('../models')
 
 router.get('/', (req, res) => {
   res.sendFile(join(__dirname, '../public/html/home.html'))
 })
 
 router.get('/dashboard', (req, res) => {
-  res.sendFile(join(__dirname, '../public/html/dashboard.html'))
+  // res.sendFile(join(__dirname, '../public/html/dashboard.html'))
+  res.render('dashboard', {
+    page: {
+      name: 'dashboard'
+    }
+  })
 })
 
 router.get('/portal', (req, res) => {
@@ -47,7 +52,12 @@ router.get('/product', (req, res) => {
 })
 
 router.get('/login', (req, res) => {
-  res.sendFile(join(__dirname, '../public/html/login.html'))
+  // res.sendFile(join(__dirname, '../public/html/login.html'))
+  res.render('login', {
+    page: {
+      name: 'login'
+    }
+  })
 })
 
 module.exports = router

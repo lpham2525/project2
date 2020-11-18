@@ -5,7 +5,7 @@ const successHandler = (data) => {
   window.location.replace('/dashboard')
 }
 
-document.getElementById('login').addEventListener('click', event => {
+document.getElementById('loginBtn').addEventListener('click', event => {
   event.preventDefault()
   axios.get(`/login/${document.getElementById('loginName').value}`)
     .then(({ data }) => successHandler(data))

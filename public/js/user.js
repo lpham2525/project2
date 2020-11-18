@@ -43,11 +43,9 @@ window.localUser = {
 
 function displayLogin () {
   if (isLogin) {
+    document.getElementById('dashboard').style.display = 'block'
     document.getElementById('signOut').style.display = 'block'
     document.getElementById('login').style.display = 'none'
-  } else {
-    document.getElementById('signOut').style.display = 'none'
-    document.getElementById('login').style.display = 'block'
   }
 }
 
@@ -58,3 +56,5 @@ function displayLogin () {
 // })
 
 // displayLogin()
+
+confirmLogin(displayLogin)
