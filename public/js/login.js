@@ -1,21 +1,8 @@
-let isLogin = false
-
-const checkUser = () => {
-  if (localUser.get()) {
-    axios.get(`/login/${localUser.get()}`)
-      .then(({ data }) => {
-        isLogin = true
-        window.location.replace('/dashboard')
-      })
-      .catch(err => console.error(err))
-  }
-}
-
 const successHandler = (data) => {
   isLogin = true
   console.log(data)
   localUser.set(data)
-  window.location.href = '/dashboard'
+  window.location.replace('/dashboard')
 }
 
 document.getElementById('login').addEventListener('click', event => {
@@ -46,4 +33,4 @@ document.getElementById('register').addEventListener('click', event => {
   }
 })
 
-checkUser()
+localUser.confirmLogin(successHandler)

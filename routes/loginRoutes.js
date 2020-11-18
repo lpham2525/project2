@@ -1,12 +1,10 @@
 const router = require('express').Router()
 const { User } = require('../models')
-let isLogin = false
 
 // Log in user
 router.get('/login/:username', (req, res) => {
   User.findOne({ where: { username: req.params.username } })
     .then(user => {
-      isLogin = true
       res.json(user)
       res.redirect('/dashboard')
     })
@@ -17,7 +15,6 @@ router.get('/login/:username', (req, res) => {
 router.post('/login', (req, res) => {
   User.create(req.body)
     .then(user => {
-      res.json(user)
       res.redirect('/dashboard')
     })
     .catch(err => {

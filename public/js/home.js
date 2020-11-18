@@ -103,4 +103,3 @@ const showTimes = () => {
 window.onload = loadCards()
 window.onload = loadFeatured()
 window.onload = showTimes()
-
