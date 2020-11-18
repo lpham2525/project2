@@ -22,14 +22,17 @@ let isLogin = false
 function displayLogin () {
   if (isLogin) {
     document.getElementById('signOut').style.display = 'block'
-    document.getElementById('login').style.display = 'hidden'
+    document.getElementById('login').style.display = 'none'
   } else {
-    document.getElementById('signOut').style.display = 'hidden'
+    document.getElementById('signOut').style.display = 'none'
     document.getElementById('login').style.display = 'block'
   }
 }
+
 document.getElementById('signOut').addEventListener('click', () => {
   localUser.remove()
   isLogin = false
   window.location.replace('/home')
 })
+
+displayLogin()
