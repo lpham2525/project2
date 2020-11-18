@@ -15,7 +15,7 @@ const successHandler = (data) => {
   isLogin = true
   console.log(data)
   localUser.set(data)
-  window.location.redirect('/dashboard')
+  window.location.href = '/dashboard'
 }
 
 document.getElementById('login').addEventListener('click', event => {
@@ -44,12 +44,6 @@ document.getElementById('register').addEventListener('click', event => {
         }
       })
   }
-})
-
-document.getElementById('signOut').addEventListener('click', () => {
-  localUser.remove()
-  isLogin = false
-  window.location.redirect('/home')
 })
 
 checkUser()
