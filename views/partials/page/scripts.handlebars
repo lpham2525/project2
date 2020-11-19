@@ -1,5 +1,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src='../js/user.js'> </script>
+
+{{#each page.scripts}}
+<script src='{{this}}'></script>
+{{/each}}
 
 <script src='../js/{{page.name}}.js'> </script>

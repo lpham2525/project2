@@ -1,7 +1,4 @@
 
-// Global login state
-let isLogin = false
-
 // Retrieve user from local storage and return it
 const getUser = () => {
   return JSON.parse(localStorage.getItem('user'))
@@ -14,7 +11,6 @@ const confirmLogin = (cb) => {
   if (user) {
     axios.get(`/login/${user.username}`)
       .then(({ data }) => {
-        isLogin = true
         if (cb !== undefined) {
           cb(data)
         }
@@ -41,14 +37,6 @@ window.localUser = {
   confirmLogin: confirmLogin
 }
 
-function displayLogin () {
-  if (isLogin) {
-    document.getElementById('dashboard').style.display = 'block'
-    document.getElementById('signOut').style.display = 'block'
-    document.getElementById('login').style.display = 'none'
-  }
-}
-
 // document.getElementById('signOut').addEventListener('click', () => {
 //   localUser.remove()
 //   isLogin = false
@@ -56,5 +44,3 @@ function displayLogin () {
 // })
 
 // displayLogin()
-
-confirmLogin(displayLogin)

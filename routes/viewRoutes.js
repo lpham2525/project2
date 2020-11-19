@@ -2,15 +2,28 @@ const router = require('express').Router()
 const { join } = require('path')
 // const { Artist, Item } = require('../models')
 
+// List of common scripts
+const commonScripts = [
+  'user.js',
+  'page.js'
+].map((n) => '/js/common/' + n)
+
 router.get('/', (req, res) => {
-  res.sendFile(join(__dirname, '../public/html/home.html'))
+  // res.sendFile(join(__dirname, '../public/html/home.html'))
+  res.render('home', {
+    page: {
+      name: 'home',
+      scripts: commonScripts
+    }
+  })
 })
 
 router.get('/dashboard', (req, res) => {
   // res.sendFile(join(__dirname, '../public/html/dashboard.html'))
   res.render('dashboard', {
     page: {
-      name: 'dashboard'
+      name: 'dashboard',
+      scripts: commonScripts
     }
   })
 })
@@ -55,7 +68,8 @@ router.get('/login', (req, res) => {
   // res.sendFile(join(__dirname, '../public/html/login.html'))
   res.render('login', {
     page: {
-      name: 'login'
+      name: 'login',
+      scripts: commonScripts
     }
   })
 })
