@@ -91,7 +91,7 @@ router.get('/cart', (req, res) => {
     page: {
       name: 'cart',
       scripts: commonScripts,
-      userImages: cartImgs
+      cartImages: cartImgs
     }
   })
 })

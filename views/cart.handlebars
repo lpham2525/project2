@@ -3,10 +3,10 @@
   <div class="section">
     <h3>Items in Cart</h3>
     <div class="row">
-      {{#each page.userImages}}
+      {{#each page.cartImages}}
       {{> thumbnail_card img=url title=title}}
       {{/each}}
-      <button id ='checkOut'>Check Out</button>
     </div>
+    <button id='checkOut'>Check Out</button>
   </div>
 </div>
