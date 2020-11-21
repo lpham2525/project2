@@ -1,9 +1,10 @@
 const successHandler = (data) => {
-  isLogin = true
   console.log(data)
   localUser.set(data)
   window.location.replace('/dashboard')
 }
+
+const registerAlert = document.getElementById('registerAlert')
 
 document.getElementById('loginBtn').addEventListener('click', event => {
   event.preventDefault()
@@ -15,8 +16,8 @@ document.getElementById('loginBtn').addEventListener('click', event => {
 document.getElementById('register').addEventListener('click', event => {
   event.preventDefault()
   if (document.getElementById('registerName').value === '') {
-    document.getElementById('registerAlert').style.display = 'block'
-    document.getElementById('registerAlert').textContent = 'Please type in a username.'
+    registerAlert.style.display = 'block'
+    registerAlert.textContent = 'Please type in a username.'
   } else {
     // Create a new user!
     axios.post('/api/users/create', { username: document.getElementById('registerName').value })
@@ -24,8 +25,8 @@ document.getElementById('register').addEventListener('click', event => {
       .catch(err => {
         if (err.response.status === 409) {
           console.log('USER ALREADY EXISTS')
-          document.getElementById('registerAlert').style.display = 'block'
-          document.getElementById('registerAlert').textContent = 'Username already exists. Choose another username or log in.'
+          registerAlert.style.display = 'block'
+          registerAlert.textContent = 'Username already exists. Choose another username or log in.'
         } else {
           console.error(err)
         }

@@ -20,10 +20,16 @@ router.get('/', (req, res) => {
 
 router.get('/dashboard', (req, res) => {
   // res.sendFile(join(__dirname, '../public/html/dashboard.html'))
+
+  const usrImgs = [
+    { url: 'https://i.imgur.com/vW8YWqF.jpg', title: 'A Test Image' },
+    { url: 'https://i.imgur.com/hERRtw0.jpg', title: "Don't do drugs" }]
+
   res.render('dashboard', {
     page: {
       name: 'dashboard',
-      scripts: commonScripts
+      scripts: commonScripts,
+      userImages: usrImgs
     }
   })
 })
@@ -61,7 +67,13 @@ router.get('/portal', (req, res) => {
 // })
 
 router.get('/product', (req, res) => {
-  res.sendFile(join(__dirname, '../public/html/product.html'))
+  // res.sendFile(join(__dirname, '../public/html/product.html'))
+  res.render('product', {
+    page: {
+      name: 'product',
+      scripts: commonScripts
+    }
+  })
 })
 
 router.get('/login', (req, res) => {

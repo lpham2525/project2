@@ -17,6 +17,7 @@ app.set('view engine', 'handlebars')
 
 // TODO these are weird lines??
 app.use(express.static(join(__dirname, 'public')))
+app.use('/assets', express.static(join(__dirname, 'assets')))
 app.use(express.json({ limit: '10mb', extended: true }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
 

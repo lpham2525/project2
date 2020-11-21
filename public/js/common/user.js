@@ -1,4 +1,3 @@
-
 // Retrieve user from local storage and return it
 const getUser = () => {
   return JSON.parse(localStorage.getItem('user'))
@@ -36,11 +35,3 @@ window.localUser = {
 
   confirmLogin: confirmLogin
 }
-
-// document.getElementById('signOut').addEventListener('click', () => {
-//   localUser.remove()
-//   isLogin = false
-//   window.location.replace('/home')
-// })
-
-// displayLogin()

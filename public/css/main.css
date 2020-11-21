@@ -1,4 +1,4 @@
- html, body {
+ /* html, body {
    height: 100%;
  }
 
@@ -6,11 +6,7 @@
    display: flex;
    flex-direction: column;
    text-align: center;
- }
-
- .content {
-   flex: 1 0 auto;
- }
+ } */
 
  .page-footer {
    flex-shrink: 0;
@@ -77,7 +73,7 @@
  #artistName {
    font-size: 20px;
  }
-
+/* 
  @media screen and (max-width: 576px) {
    .nav {
      width: 150px;
@@ -157,4 +153,4 @@
    .col-12 {
      width: 100%;
    }
- }
+ } */
