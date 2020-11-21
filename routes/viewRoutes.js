@@ -9,7 +9,6 @@ const commonScripts = [
 ].map((n) => '/js/common/' + n)
 
 router.get('/', (req, res) => {
-  // res.sendFile(join(__dirname, '../public/html/home.html'))
   res.render('home', {
     page: {
       name: 'home',
@@ -19,7 +18,6 @@ router.get('/', (req, res) => {
 })
 
 router.get('/dashboard', (req, res) => {
-  // res.sendFile(join(__dirname, '../public/html/dashboard.html'))
 
   const usrImgs = [
     { url: 'https://i.imgur.com/vW8YWqF.jpg', title: 'A Test Image' },
@@ -32,10 +30,6 @@ router.get('/dashboard', (req, res) => {
       userImages: usrImgs
     }
   })
-})
-
-router.get('/portal', (req, res) => {
-  res.sendFile(join(__dirname, '../public/html/portal.html'))
 })
 
 // router.get('artists/:id', (req, res) => {
@@ -82,6 +76,22 @@ router.get('/login', (req, res) => {
     page: {
       name: 'login',
       scripts: commonScripts
+    }
+  })
+})
+
+router.get('/cart', (req, res) => {
+
+  const cartImgs = [
+    { url: 'https://i.imgur.com/WPLR9kU.jpg', title: 'Eye of God' },
+    { url: 'https://i.imgur.com/SO8H4fX.png', title: 'Be careful what you wish for' }]
+
+  res.render('cart', {
+
+    page: {
+      name: 'cart',
+      scripts: commonScripts,
+      userImages: cartImgs
     }
   })
 })
