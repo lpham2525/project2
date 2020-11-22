@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Checkout</h2>
+  <div class="section">
+    <h3>Items in Cart</h3>
+    <div class="row">
+      {{#each page.cartImages}}
+      {{> thumbnail_card img=url title=title}}
+      {{/each}}
+    </div>
+    <button id='buyNow'>Buy Now</button>
+  </div>
+</div>

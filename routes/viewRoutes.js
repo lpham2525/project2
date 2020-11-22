@@ -61,7 +61,6 @@ router.get('/dashboard', (req, res) => {
 // })
 
 router.get('/product', (req, res) => {
-  // res.sendFile(join(__dirname, '../public/html/product.html'))
   res.render('product', {
     page: {
       name: 'product',
@@ -71,7 +70,6 @@ router.get('/product', (req, res) => {
 })
 
 router.get('/login', (req, res) => {
-  // res.sendFile(join(__dirname, '../public/html/login.html'))
   res.render('login', {
     page: {
       name: 'login',
@@ -90,6 +88,21 @@ router.get('/cart', (req, res) => {
 
     page: {
       name: 'cart',
+      scripts: commonScripts,
+      cartImages: cartImgs
+    }
+  })
+})
+
+router.get('/checkout', (req, res) => {
+  const cartImgs = [
+    { url: 'https://i.imgur.com/WPLR9kU.jpg', title: 'Eye of God' },
+    { url: 'https://i.imgur.com/SO8H4fX.png', title: 'Be careful what you wish for' }]
+
+  res.render('checkout', {
+
+    page: {
+      name: 'checkout',
       scripts: commonScripts,
       cartImages: cartImgs
     }
