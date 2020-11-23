@@ -60,6 +60,11 @@ router.get('/dashboard', (req, res) => {
 // })
 
 router.get('/product', (req, res) => {
+
+  const artistBio = [
+    { src: '/assets/header-images/annie-leibovitz-portrait.jpg', bio: "Annie Leibovitz is an American portrait photographer. She is best known for her engaging portraits, particularly of celebrities, which often feature subjects in intimate settings and poses. The Library of Congress declared her a Living Legend, and she is the first woman to have a feature exhibition at Washington's National Portrait Gallery." }
+  ]
+
   const artImgs = [
     { src: '/assets/Annie_Leibovitz/Images/Angelina-Jolie-Portrait 2.jpg', title: 'Angelina Jolie Portrait' },
     { src: '/assets/Annie_Leibovitz/Images/willie-nelson.jpg', title: 'Willie Nelson, Luck Ranch in Spicewood, Texas ' },
@@ -69,6 +74,7 @@ router.get('/product', (req, res) => {
     page: {
       name: 'product',
       scripts: commonScripts,
+      artistLife: artistBio,
       artImages: artImgs
     }
   })
