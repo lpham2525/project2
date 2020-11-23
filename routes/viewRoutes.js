@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { join } = require('path')
+// const { join } = require('path')
 // const { Artist, Item } = require('../models')
 
 // List of common scripts
@@ -18,7 +18,6 @@ router.get('/', (req, res) => {
 })
 
 router.get('/dashboard', (req, res) => {
-
   const usrImgs = [
     { url: 'https://i.imgur.com/vW8YWqF.jpg', title: 'A Test Image' },
     { url: 'https://i.imgur.com/hERRtw0.jpg', title: "Don't do drugs" }]
@@ -61,10 +60,16 @@ router.get('/dashboard', (req, res) => {
 // })
 
 router.get('/product', (req, res) => {
+  const artImgs = [
+    { src: '/assets/Annie_Leibovitz/Images/Angelina-Jolie-Portrait 2.jpg', title: 'Angelina Jolie Portrait' },
+    { src: '/assets/Annie_Leibovitz/Images/willie-nelson.jpg', title: 'Willie Nelson, Luck Ranch in Spicewood, Texas ' },
+    { src: '/assets/Annie_Leibovitz/Images/Queen_Elizabeth_II.jpg', title: 'Queen Elizabeth II at Buckingham Palace, London, 2007' }]
+
   res.render('product', {
     page: {
       name: 'product',
-      scripts: commonScripts
+      scripts: commonScripts,
+      artImages: artImgs
     }
   })
 })
@@ -79,7 +84,6 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/cart', (req, res) => {
-
   const cartImgs = [
     { url: 'https://i.imgur.com/WPLR9kU.jpg', title: 'Eye of God' },
     { url: 'https://i.imgur.com/SO8H4fX.png', title: 'Be careful what you wish for' }]

@@ -1,7 +1,7 @@
-function pageRedirect () {
-  window.location.href = 'url of product page'
-}
+// function pageRedirect () {
+//   window.location.href = 'url of product page'
+// }
 
-document.getElementById().addEventListener('click', () => {
-  pageRedirect()
-})
+// document.getElementById().addEventListener('click', () => {
+//   pageRedirect()
+// })

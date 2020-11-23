@@ -1,5 +1,3 @@
-const axios = require('axios')
-
 const goToProductPage = (id) => {
   return axios.get(`/api/items/:${id}`)
 }

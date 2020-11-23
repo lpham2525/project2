@@ -2,8 +2,11 @@
 
   <div class="row">
     <div class="col s6 featured-product-image">
-      <img class="featured-product-image"
-        src="../assets/Annie_Leibovitz/Images/Nicole-Kidman-Portrait-1990 2.jpg">
+      {{!-- <img class="featured-product-image"
+        src="../assets/Annie_Leibovitz/Images/Queen_Elizabeth_II_Buckingham Palace_London_2007 2.jpg 2.jpg"> --}}
+        {{!-- {{#each page.artImgs}}
+          {{{> thumbnail_card img=url title=title}}}
+        {{/each}} --}}
     </div>
 
     <div class="col s6">
@@ -22,8 +25,12 @@
   <div class="divider"></div>
   <div class="section">
     <div class="row">
-      <h4>Additional Work by this Artist</h4>
-      <div class="col s4">
+      <h5>Additional Works by this Artist</h5>
+      {{#each page.artImages}}
+        {{> artwork_card img=src title=title}}
+      {{/each}}
+      
+      {{!-- <div class="col s4">
         <div class="card large">
           <div class="card-image">
             <img src="../assets/Annie_Leibovitz/Images/R2-D2_London_2002.jpg">
@@ -43,7 +50,7 @@
         <div class="card large">
           <div class="card-image">
             <img
-              src="../assets/Annie_Leibovitz/Images/John_Lennon_and_Yoko Ono,_The Dakota,_New_York,_December_8,_1980.jpg">
+              src="../assets/Annie_Leibovitz/Images/John_Lennon_and_Yoko Ono,_The Dakota,_New_York,_December_8,_1980 2.jpg">
             <!-- <span class="card-title">Card Title</span> -->
           </div>
           <div class="card-content">
@@ -68,7 +75,7 @@
             <a class="waves-effect waves-light btn-small addBtn">Add to Cart</a>
           </div>
         </div>
-      </div>
+      </div> --}}
 
     </div>
   </div>
