@@ -2,14 +2,14 @@
 
   <div class="row">
     <div class="col s6 featured-product-image">
-      {{!-- <img class="featured-product-image"
-        src="../assets/Annie_Leibovitz/Images/Queen_Elizabeth_II_Buckingham Palace_London_2007 2.jpg 2.jpg"> --}}
+      {{#each page.featuredArt}}
+        {{featured_card img=src title=title description=description}}
+      {{/each}}
     </div>
 
     <div class="col s6">
-      <h3 class="featured-work-title">Artwork Title</h3>
-      <h4 class="featured-work-artist">Artist Name</h4>
-      <p class=timer>Ends in 5 hours</p>
+      {{!-- <h3 class="featured-work-title">Artwork Title</h3>
+      <p class="timer">Ends in ? hours</p> --}}
       <div class="featured-description-box">
         {{#each page.artistLife}}
           {{> artistBio_card img=src title=title}}

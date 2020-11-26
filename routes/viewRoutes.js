@@ -61,19 +61,22 @@ router.get('/dashboard', (req, res) => {
 
 router.get('/product', (req, res) => {
 
+  const featured = { src: '/assets/Annie_Leibovitz/Images/Nicole-Kidman-Portrait-1990 2.jpg', title: 'Nicole Kidman Portrait 1997', description: `A portrait of Australian-born actress Nicole Kidman. Shot in Charleston, East Sussex, England in 1997 for Vanity Fair. Leibovitz said, "There's no bad way to photograph her."`, id: 1 }
+
   const artistBio = [
     { src: '/assets/header-images/annie-leibovitz-portrait.jpg', bio: "Annie Leibovitz is an American portrait photographer. She is best known for her engaging portraits, particularly of celebrities, which often feature subjects in intimate settings and poses. The Library of Congress declared her a Living Legend, and she is the first woman to have a feature exhibition at Washington's National Portrait Gallery." }
   ]
 
   const artImgs = [
-    { src: '/assets/Annie_Leibovitz/Images/Angelina-Jolie-Portrait 2.jpg', title: 'Angelina Jolie Portrait' },
-    { src: '/assets/Annie_Leibovitz/Images/willie-nelson.jpg', title: 'Willie Nelson, Luck Ranch in Spicewood, Texas ' },
-    { src: '/assets/Annie_Leibovitz/Images/Queen_Elizabeth_II.jpg', title: 'Queen Elizabeth II at Buckingham Palace, London, 2007' }]
+    { src: '/assets/Annie_Leibovitz/Images/Angelina-Jolie-Portrait 2.jpg', title: 'Angelina Jolie Portrait', id: 2 },
+    { src: '/assets/Annie_Leibovitz/Images/willie-nelson.jpg', title: 'Willie Nelson, Luck Ranch in Spicewood, Texas ', id: 3 },
+    { src: '/assets/Annie_Leibovitz/Images/Queen_Elizabeth_II.jpg', title: 'Queen Elizabeth II at Buckingham Palace, London, 2007', id: 4 }]
 
   res.render('product', {
     page: {
       name: 'product',
       scripts: commonScripts,
+      featuredArt: featured,
       artistLife: artistBio,
       artImages: artImgs
     }
