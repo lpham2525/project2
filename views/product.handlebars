@@ -1,6 +1,7 @@
 <!-- featured product -->
   <div class="row">
     <div class="col s6 featured-product-image">
+      <h5>Featured Artwork</h5>
       {{#each page.featuredArt}}
         {{> featured_card img=src title=title description=description id=id}}
       {{/each}}
@@ -8,6 +9,7 @@
   <!-- end of featured product -->
     <div class="col s6">
       <div class="featured-description-box">
+        <h5>Artist Bio</h5>
         {{#each page.artistLife}}
           {{> artistBio_card img=src title=title}}
         {{/each}}
