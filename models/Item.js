@@ -10,7 +10,7 @@ Item.init({
   },
   productUrl: {
     type: DataTypes.TEXT,
-    allowNull: false
+    allowNull: true
   },
   category: {
     type: DataTypes.STRING,
@@ -24,14 +24,14 @@ Item.init({
   //   type: DataTypes.STRING,
   //   allowNull: false
   // },
-  artistId: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-  },
-  eventId: {
-    type: DataTypes.INTEGER,
-    allowNull: true
-  }
+  // artistId: {
+  //   type: DataTypes.INTEGER,
+  //   allowNull: true
+  // },
+  // eventId: {
+  //   type: DataTypes.INTEGER,
+  //   allowNull: true
+  // }
 }, { sequelize, modelName: 'item' })
 
 module.exports = Item
