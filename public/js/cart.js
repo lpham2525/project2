@@ -1,5 +1,3 @@
-const { default: Axios } = require("axios")
-
 document.getElementById('checkOut').addEventListener('click', () => {
   window.location.replace('/checkout')
 })
@@ -9,9 +7,23 @@ const getItems = () => {
     .then(({ data }) => {
       document.getElementById('listItems').innerHTML = ''
       data.forEach(item => {
-        let itemElem = document.createElement('li')
+        let itemElem = document.createElement('div')
+        itemElem.className = 'card'
         itemElem.innerHTML = `
-        <button class = 'deleteItem' data-item="${item.text}">Delete</button> `
+        <a href="#">
+      <div class="card-image">
+        <img src="{{img}}">
+      </div>
+      <div class="card-action">
+        {{title}}
+      </div>
+      </a>
+      <a href="#">
+      <div class="card-action">
+        <span style='color:red' data-id={{id}}>Delete</span>
+      </div>
+      </a>
+    </div>`
         document.getElementById('listItems').append(itemElem)
       })
     })
