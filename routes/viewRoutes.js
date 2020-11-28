@@ -67,9 +67,9 @@ router.get('/product', (req, res) => {
   ]
 
   const artImgs = [
-    { src: '/assets/Annie_Leibovitz/Images/Angelina-Jolie-Portrait 2.jpg', title: 'Angelina Jolie Portrait', id: 2 },
-    { src: '/assets/Annie_Leibovitz/Images/willie-nelson.jpg', title: 'Willie Nelson, Luck Ranch in Spicewood, Texas ', id: 3 },
-    { src: '/assets/Annie_Leibovitz/Images/Queen_Elizabeth_II.jpg', title: 'Queen Elizabeth II at Buckingham Palace, London, 2007', id: 4 }]
+    { src: '/assets/Annie_Leibovitz/Images/Angelina-Jolie-Portrait 2.jpg', title: 'Angelina Jolie Portrait', id: 2, description: `Angelina Jolie against the backdrop of Notre Dame. Photograph for Disney Dream Portraits` },
+    { src: '/assets/Annie_Leibovitz/Images/willie-nelson.jpg', title: 'Willie Nelson', id: 3, description: `Photographed at Luck Ranch in Spicewood, Texas; photograph on silver gelatin print` },
+    { src: '/assets/Annie_Leibovitz/Images/Queen_Elizabeth_II.jpg', title: 'Queen Elizabeth II at Buckingham Palace, London, 2007', id: 4 , description: `The first photograph of the Queen taken by an American photographer.` }]
 
   res.render('product', {
     page: {
