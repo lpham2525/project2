@@ -4,7 +4,6 @@
 function navbarSignedIn (isLogin) {
   if (isLogin) {
     document.getElementById('dashboard').style.display = 'block'
-
     document.getElementById('loginNav').style.display = 'none'
 
     // Show and attach click handler

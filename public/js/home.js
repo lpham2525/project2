@@ -1,5 +1,5 @@
 const goToProductPage = (id) => {
-  return axios.get(`/api/items/:${id}`)
+  axios.get(`/api/items/:${id}`)
 }
 
 goToProductPage()
@@ -77,8 +77,8 @@ const loadFeatured = () => {
       console.log(data)
       data.item.forEach(item => {
         document.getElementById('featured').innerHTML =
-          `<img src="${item.productUrl}" alt="${item.title}" id="mainImg" max-width="1000" max-height="1000">
-          <div class="right" id="nameBox">
+          `<img src="${item.productUrl}" alt="${item.title}" id="mainImg" max-width="700" max-height="700">
+          <div class="left" id="nameBox">
             <p id="artistName">${item.artistName}</p>
             <p>Sale Ends In:</p>
           </div> 
@@ -90,8 +90,8 @@ const loadFeatured = () => {
 
 const showTimes = () => {
   const now = new Date()
-  const mins = 59 - now.getMinutes()
   const hrs = 23 - now.getHours()
+  const mins = 59 - now.getMinutes()
   const secs = 59 - now.getSeconds()
   let str = ''
   str += hrs + ': ' + mins + ': ' + secs

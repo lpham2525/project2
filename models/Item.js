@@ -19,7 +19,7 @@ Item.init({
   price: {
     type: DataTypes.INTEGER,
     allowNull: true
-  },
+  }
   // artistName: {
   //   type: DataTypes.STRING,
   //   allowNull: false
