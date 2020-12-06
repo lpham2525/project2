@@ -4,7 +4,7 @@
     <h3>Items in Cart</h3>
     <div class="row">
       {{#each page.cartImages}}
-      {{> thumbnail_card img=url title=title}}
+      {{> thumbnail_card img=url title=title id=id}}
       {{/each}}
     </div>
     <button id='checkOut'>Check Out</button>

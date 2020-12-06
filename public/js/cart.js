@@ -39,5 +39,11 @@ const deleteItem = id => {
 }
 
 document.addEventListener('click', event => {
-  deleteItem(event.target.dataset.id)
+  if (event.target.className === 'deleteItem') {
+    axios.delete(`/api/items/${event.target.dataset.id}`)
+      .then(() => {
+        event.target.parentNode.remove()
+      })
+      .catch(err => console.error(err))
+  }
 })
