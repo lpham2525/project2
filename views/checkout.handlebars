@@ -2,11 +2,12 @@
   <h2>Welcome to the Checkout Page!</h2>
   <div class="section">
     <h3>Items in Cart</h3>
-    <div class="row">
-      {{#each page.cartImages}}
-      {{> thumbnail_card img=url title=title}}
-      {{/each}}
-    </div>
-    <button id='buyNow'>Buy Now</button>
+      <div class="row">
+        {{#each page.cartImages}}
+        {{> thumbnail_card img=url title=title}}
+        {{/each}}
+      </div>
+        <button id='buyNow'>Buy Now</button>
+        <div id='boughtAlert'></div>
   </div>
 </div>
