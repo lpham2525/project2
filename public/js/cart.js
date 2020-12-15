@@ -2,7 +2,7 @@ const checkOut = document.getElementById('checkOut')
 
 // function that displays checkout button if there are items in the cart. Otherwise, checkout button is hidden.
 const showCheckout = () => {
-  if (page.cartImages === 0) {
+  if (page.cartImages.cartImgs === []) {
     checkOut.style.display = 'hidden'
   } else {
     checkOut.style.display = 'block'
