@@ -1,4 +1,15 @@
-document.getElementById('checkOut').addEventListener('click', () => {
+const checkOut = document.getElementById('checkOut')
+
+// function that displays checkout button if there are items in the cart. Otherwise, checkout button is hidden.
+const showCheckout = () => {
+  if (page.cartImages === 0) {
+    checkOut.style.display = 'hidden'
+  } else {
+    checkOut.style.display = 'block'
+  }
+}
+
+checkOut.addEventListener('click', () => {
   window.location.replace('/checkout')
 })
 
@@ -47,3 +58,5 @@ document.addEventListener('click', event => {
       .catch(err => console.error(err))
   }
 })
+
+showCheckout()
