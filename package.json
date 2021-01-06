@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/usrs/ArtistaDay#readme",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "chocolat": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
