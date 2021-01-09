@@ -60,7 +60,12 @@ router.get('/dashboard', (req, res) => {
 // })
 
 router.get('/product', (req, res) => {
-  const featured = [{ src: '/assets/Annie_Leibovitz/Images/Nicole-Kidman-Portrait-1990 2.jpg', title: 'Nicole Kidman Portrait 1997', description: `A portrait of Australian-born actress Nicole Kidman. Shot in Charleston, East Sussex, England in 1997 for Vanity Fair. Leibovitz said, "There's no bad way to photograph her."`, id: 1 }]
+  const featured = [{
+    // src: '/assets/Annie_Leibovitz/Images/star-wars-the-rise-of-skywalker-vanity-fair 2.jpg',
+    src: 'https://i.imgur.com/vqJyZHA.jpg',
+    title: 'Star Wars: The Rise of Skywalker',
+    description: `HORSING AROUND:
+Finn and new ally Jannah (Naomi Ackie), atop hardy orbaks, lead the charge against the mechanized forces of the First Order. “It’s extremely surreal to be in it,” says Ackie, “and see how it works from the inside.”`, id: 1 }]
 
   const artistBio = [
     { src: '/assets/header-images/annie-leibovitz-portrait.jpg', bio: "Annie Leibovitz is an American portrait photographer. She is best known for her engaging portraits, particularly of celebrities, which often feature subjects in intimate settings and poses. The Library of Congress declared her a Living Legend, and she is the first woman to have a feature exhibition at Washington's National Portrait Gallery." }
