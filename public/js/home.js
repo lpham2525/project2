@@ -1,4 +1,4 @@
-const goToProductPage = (id) => {
+const goToProductPage = id => {
   axios.get(`/api/items/:${id}`)
 }
 
@@ -88,16 +88,16 @@ const loadFeatured = () => {
     .catch(e => console.error(e))
 }
 
-const showTimes = () => {
+const showTimer = () => {
   const now = new Date()
   const hrs = 23 - now.getHours()
   const mins = 59 - now.getMinutes()
   const secs = 59 - now.getSeconds()
   let str = ''
   str += hrs + ': ' + mins + ': ' + secs
-  document.getElementById('timer').innerHTML = 'Sale Ends In: ' + str
+  document.getElementById('timer').innerHTML = 'Sale Ends In ' + str
 }
 
 window.onload = loadCards()
 window.onload = loadFeatured()
-window.onload = showTimes()
+window.onload = showTimer()

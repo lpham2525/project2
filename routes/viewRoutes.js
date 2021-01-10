@@ -69,7 +69,7 @@ Finn and new ally Jannah (Naomi Ackie), atop hardy orbaks, lead the charge again
   }]
 
   const artistBio = [
-    { src: '/assets/header-images/annie-leibovitz-portrait.jpg', bio: "Annie Leibovitz is an American portrait photographer. She is best known for her engaging portraits, particularly of celebrities, which often feature subjects in intimate settings and poses. The Library of Congress declared her a Living Legend, and she is the first woman to have a feature exhibition at Washington's National Portrait Gallery." }
+    { src: 'https://i.imgur.com/4yyH7TR.jpg', bio: "Annie Leibovitz is an American portrait photographer. She is best known for her engaging portraits, particularly of celebrities, which often feature subjects in intimate settings and poses. The Library of Congress declared her a Living Legend, and she is the first woman to have a feature exhibition at Washington's National Portrait Gallery." }
   ]
 
   const artImgs = [
