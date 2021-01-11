@@ -96,6 +96,7 @@ const showTimer = () => {
   let str = ''
   str += hrs + ': ' + mins + ': ' + secs
   document.getElementById('timer').innerHTML = 'Sale Ends In ' + str
+  const timeInterval = setInterval(showTimer, 1000)
 }
 
 window.onload = loadCards()
