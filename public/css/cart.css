@@ -1,0 +1,16 @@
+<!--card-->
+
+.card{
+  transition : transform 0.5s;
+-webkit-transition : transform 0.5s;
+-moz-transition : transform 0.5s;
+-ms-transition : transform 0.5s;
+-o-transition : transform 0.5s;
+}
+.card :hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
