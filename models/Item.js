@@ -19,19 +19,15 @@ Item.init({
   price: {
     type: DataTypes.INTEGER,
     allowNull: true
+  },
+  artistName: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  artistId: {
+    type: DataTypes.INTEGER,
+    allowNull: true
   }
-  // artistName: {
-  //   type: DataTypes.STRING,
-  //   allowNull: false
-  // },
-  // artistId: {
-  //   type: DataTypes.INTEGER,
-  //   allowNull: true
-  // },
-  // eventId: {
-  //   type: DataTypes.INTEGER,
-  //   allowNull: true
-  // }
-}, { sequelize, modelName: 'item' })
+}, { timestamps: false, sequelize, modelName: 'item' })
 
 module.exports = Item
