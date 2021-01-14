@@ -72,7 +72,7 @@ const loadCards = () => {
 }
 
 const loadFeatured = () => {
-  axios.get('/api/items/:id')
+  axios.get('/api/items')
     .then(({ data }) => {
       console.log(data)
       data.item.forEach(item => {
