@@ -1,11 +1,11 @@
 const checkOut = document.getElementById('checkOut')
 const page = []
-const cartPage = document.getElementById('cartPage')
+let cartPage = document.getElementById('cartPage')
 
 // TODO: make cartRoutes and finish function to grab images from cart
-const checkCart = () => {
-  axios.get('/cart')
-    .then()
+// const checkCart = () => {
+//   axios.get('/cart')
+//     .then()
 
 // function that displays checkout button if there are items in the cart. Otherwise, checkout button is hidden.
 const showCheckout = () => {

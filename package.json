@@ -18,13 +18,14 @@
   },
   "homepage": "https://github.com/usrs/ArtistaDay#readme",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "chocolat": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.7",
     "imgur": "^0.3.1",
-    "materialize-css": "^1.0.0-rc.2",
+    "materialize-css": "^1.0.0",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.6",
     "sequelize": "^5.21.11"
