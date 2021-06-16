@@ -99,8 +99,9 @@ router.get('/login', (req, res) => {
 
 router.get('/cart', (req, res) => {
   const cartImgs = [
-    { url: 'https://i.imgur.com/WPLR9kU.jpg', title: 'Eye of God', id: 5 },
-    { url: 'https://i.imgur.com/SO8H4fX.png', title: 'Be careful what you wish for', id: 6 }]
+    // { url: 'https://i.imgur.com/WPLR9kU.jpg', title: 'Eye of God', id: 5 },
+    // { url: 'https://i.imgur.com/SO8H4fX.png', title: 'Be careful what you wish for', id: 6 }
+  ]
 
   res.render('cart', {
 
