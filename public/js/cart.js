@@ -1,39 +1,52 @@
 const checkOut = document.getElementById('checkOut')
 const page = []
-let cartPage = document.getElementById('cartPage')
+//let cartPage = document.getElementById('cartPage')
 
-// TODO: make cartRoutes and finish function to grab images from cart
-// const checkCart = () => {
-//   axios.get('/cart')
-//     .then()
+//function to retrieve items in user's cart or return an empty array if the cart is empty
+const getCartItems = () => {
+  const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
+  console.log("testing getCartItems function")
+  return cartItems
+}
 
-// function that displays checkout button if there are items in the cart. Otherwise, checkout button is hidden.
-const showCheckout = () => {
-  if (cartPage = []) {
-    checkOut.style.display = 'hidden'
-  } else {
-    checkOut.style.display = 'block'
-  }
+//function to set items in cart into local storage
+const setCartItems = () => {
+  localStorage.setItem('cartItems', JSON.stringify(cartItems))
 }
 
 checkOut.addEventListener('click', () => {
   window.location.replace('/checkout')
 })
 
-const getItems = () => {
+//function to get all items in cart
+const getItemsInCart = () => {
   axios.get('/api/items')
     .then(({ data }) => {
+      const checkOut = document.getElementById('checkOut')
+      const alert = document.getElementById('cartAlert')
+      console.log(data)
+      if (data === []) {
+        console.log(data)
+        alert.textContent = 'There are currently no items in your cart. Take a look around the site and see what you like!'
+        checkOut.style.display = 'hidden'
+      } else {
+        console.log(data)
+        console.log(data.length)
+        alert.textContent = `Items in cart: ${data.length}`
+        checkOut.style.display = 'block'
+      }
       document.getElementById('listItems').innerHTML = ''
       data.forEach(item => {
+        console.log(item)
         let itemElem = document.createElement('div')
         itemElem.className = 'card'
         itemElem.innerHTML = `
         <a href="#">
       <div class="card-image">
-        <img src="{{img}}">
+        <img src="${item.productUrl}">
       </div>
       <div class="card-action">
-        {{title}}
+        ${item.title}
       </div>
       </a>
       <a href="#">
@@ -46,6 +59,11 @@ const getItems = () => {
     })
     .catch(err => console.log(err))
 }
+
+// function that displays checkout button if there are items in the cart. Otherwise, checkout button is hidden.
+// const showCheckout = () => {
+
+// }
 
 const deleteItem = id => {
   axios.delete(`/api/items/${id}`)
@@ -66,4 +84,6 @@ document.addEventListener('click', event => {
   }
 })
 
-showCheckout()
+getItemsInCart()
+
+//showCheckout()

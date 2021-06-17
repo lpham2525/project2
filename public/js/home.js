@@ -46,30 +46,31 @@ goToProductPage()
 
 // window.onload = loadRecent()
 
-const loadCards = () => {
-  axios.get('/api/artists')
-    .then(({ data }) => {
-      data.artists.forEach(artist => {
-        const artistElem = document.createElement('div')
-        artistElem.innerHTML =
-          `<div class="col s3">
-            <div class="card medium">
-              <div class="card-image">
-                <img src="${artist.artistPhoto}" alt="${artist.name}/>
-              </div>
-              <div class="card-content">
-                <p class="card-artist-name">:${artist.name}</p>
-              </div>
-              <div class="card-action">
-                <a class="waves-effect waves-light btn-small addBtn" a href="./artists/${artist.name}">Visit Page</a>
-              </div>
-            </div>
-          </div>`
-        document.getElementById('recentArt').append(artistElem)
-      })
-    })
-    .catch(e => console.error(e))
-}
+// const loadCards = () => {
+//   axios.get('/api/artists')
+//     .then(({ data }) => {
+//       console.log(data)
+//       data.artists.forEach(artist => {
+//         const artistElem = document.createElement('div')
+//         artistElem.innerHTML =
+//           `<div class="col s3">
+//             <div class="card medium">
+//               <div class="card-image">
+//                 <img src="${artist.artistPhoto}" alt="${artist.name}/>
+//               </div>
+//               <div class="card-content">
+//                 <p class="card-artist-name">:${artist.name}</p>
+//               </div>
+//               <div class="card-action">
+//                 <a class="waves-effect waves-light btn-small addBtn" a href="./artists/${artist.name}">Visit Page</a>
+//               </div>
+//             </div>
+//           </div>`
+//         document.getElementById('recentArt').append(artistElem)
+//       })
+//     })
+//     .catch(e => console.error(e))
+// }
 
 const loadFeatured = () => {
   axios.get('/api/items')
@@ -99,6 +100,6 @@ const showTimer = () => {
   const timeInterval = setInterval(showTimer, 1000)
 }
 
-window.onload = loadCards()
+//window.onload = loadCards()
 window.onload = loadFeatured()
 window.onload = showTimer()

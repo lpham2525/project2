@@ -1,11 +1,13 @@
 <div class="container">
   <h2>Cart</h2>
   <div class="section">
-    <h3>Items in Cart</h3>
+    <h3 id="cartAlert"></h3>
     <div class="row" id='cartPage'>
+      <ul id="listItems">
       {{#each page.cartImages}}
       {{> thumbnail_card img=url title=title id=id}}
       {{/each}}
+      </ul>
     </div>
     <button id='checkOut'>Check Out &#8594;</button>
   </div>
