@@ -104,5 +104,5 @@ const showTimer = () => {
 }
 
 //window.onload = loadCards()
-window.onload = loadFeatured()
+//window.onload = loadFeatured()
 window.onload = showTimer()
