@@ -76,14 +76,17 @@ const loadFeatured = () => {
   axios.get('/api/items')
     .then(({ data }) => {
       console.log(data)
-      data.item.forEach(item => {
+      data.forEach(item => {
         document.getElementById('featured').innerHTML =
-          `<img src="${item.productUrl}" alt="${item.title}" id="mainImg" max-width="700" max-height="700">
+          `
+          <img src="${item.productUrl}" alt="${item.title}" id="mainImg" max-width="700" max-height="700">
           <div class="left" id="nameBox">
             <p id="artistName">${item.artistName}</p>
-            <p>Sale Ends In:</p>
-          </div> 
-        <a href="./artists/:${item.artistId}" class="prodLink">Visit product page</a>`
+            <div class="right">
+              <span id='timer'></span>
+            </div>
+          </div>
+        <a href="./artists/${item.artistId}" class="prodLink">Visit product page</a>`
       })
     })
     .catch(e => console.error(e))
