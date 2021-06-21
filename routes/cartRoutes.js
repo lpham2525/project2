@@ -1,14 +1,7 @@
 const router = require('express').Router()
 const { Cart } = require('../models')
 
-// GET all items in cart
-router.get('/cart', (req, res) => {
-  Cart.findAll()
-    .then(cart => res.json(cart))
-    .catch(err => console.error(err))
-})
-
-// GET one item in cart
+// GET one cart
 router.get('/cart/:id', (req, res) => {
   Cart.findOne({ where: { id: req.params.id } })
     .then(cart => res.json(cart))
@@ -16,7 +9,7 @@ router.get('/cart/:id', (req, res) => {
 })
 
 // POST one item to the cart
-router.post('/cart', (req, res) => {
+router.post('/cart/:id', (req, res) => {
   Cart.create(req.body)
     .then(cart => res.json(cart))
     .catch(err => console.error(err))
@@ -29,7 +22,7 @@ router.put('/cart/:id', (req, res) => {
     .catch(err => console.error(err))
 })
 
-// DELETE one item
+// DELETE one cart
 router.delete('/cart/:id', (req, res) => {
   Cart.destroy({ where: { id: req.params.id } })
     .then(cart => res.json(cart))

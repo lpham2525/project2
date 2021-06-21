@@ -14,13 +14,11 @@ const setCartItems = () => {
 
 //function to get all items in cart
 const getItemsInCart = () => {
-  axios.get('/api/items')
+  axios.get('/api/cart')
     .then(({ data }) => {
       const buyNow = document.getElementById('buyNow')
       const alert = document.getElementById('cartAlert')
-      console.log(data)
       if (data === []) {
-        console.log(data)
         alert.textContent = 'There are currently no items in your cart. Take a look around the site and see what you like!'
         buyNow.style.display = 'hidden'
       } else {

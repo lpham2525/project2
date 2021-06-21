@@ -7,9 +7,8 @@ const User = require('./User.js')
 Artist.hasMany(Item)
 Event.belongsTo(Artist)
 Item.belongsTo(Artist)
-// Cart.hasMany(Item)
-// Item.belongsTo(Cart)
-// User.hasMany(Item)
+User.hasOne(Cart)
+Cart.belongsTo(User)
 
 module.exports = { Artist, Cart, Event, Item, User }
 

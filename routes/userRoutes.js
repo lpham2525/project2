@@ -9,7 +9,7 @@ router.post('/users/create', (req, res) => {
       if (err.name === 'SequelizeUniqueConstraintError') {
         res.status(409).send('User already exists')
       } else {
-        res.status(500).send('Server had something go wrong')
+        res.status(500).send('Something go wrong with the server')
       }
       console.error(err)
     })
