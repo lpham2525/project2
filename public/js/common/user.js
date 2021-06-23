@@ -8,6 +8,7 @@ const confirmLogin = (cb) => {
   // If a user exists in local storage, confirm that it exists on the backend
   const user = getUser()
   if (user) {
+    console.log(user)
     axios.get(`/login/${user.username}`)
       .then(({ data }) => {
         if (cb !== undefined) {

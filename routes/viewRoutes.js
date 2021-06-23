@@ -1,12 +1,13 @@
 const router = require('express').Router()
 // const { join } = require('path')
 // const { Artist, Item } = require('../models')
+const { User, Cart } = require('../models')
 
 // List of common scripts
 const commonScripts = [
   'user.js',
   'page.js'
-].map((n) => '/js/common/' + n)
+].map(n => '/js/common/' + n)
 
 router.get('/', (req, res) => {
   res.render('home', {
@@ -46,7 +47,7 @@ router.get('/dashboard', (req, res) => {
 // }
 
 // router.get('items/:id', (req, res) => {
-//   Item.findOne({ id: req.params.id, include: [Artist] })
+//   Item.findOne({ where { id: req.params.id, include: [Artist] } })
 //     .then(item => {
 //       res.render('items', { item: item.dataValues })
 //     })
@@ -98,19 +99,16 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/cart', (req, res) => {
-  const cartImgs = [
-    // { url: 'https://i.imgur.com/WPLR9kU.jpg', title: 'Eye of God', id: 5 },
-    // { url: 'https://i.imgur.com/SO8H4fX.png', title: 'Be careful what you wish for', id: 6 }
-  ]
-
-  res.render('cart', {
+  const cartImgs = []
+    res.render('cart', { 
 
     page: {
       name: 'cart',
       scripts: commonScripts,
       cartImages: cartImgs
     }
+    })
   })
-})
+
 
 module.exports = router

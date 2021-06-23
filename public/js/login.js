@@ -1,7 +1,7 @@
 const successHandler = (data) => {
   console.log(data)
   localUser.set(data)
-  window.location.replace('/dashboard')
+  // window.location.replace('/dashboard')
 }
 
 const registerAlert = document.getElementById('registerAlert')
