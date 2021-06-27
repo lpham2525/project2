@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
-class Cart extends Model {}
+class Cart extends Model { }
 
 Cart.init({
   item: DataTypes.STRING,

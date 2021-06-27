@@ -19,41 +19,41 @@ const getItemsInCart = () => {
   axios.get(`/api/users/${localStorage.getItem('user')}`)
     .then(({ data }) => {
       console.log(data)
-      // const buyNow = document.getElementById('buyNow')
-      // const alert = document.getElementById('cartAlert')
-      // if (data === []) {
-      //   alert.textContent = 'There are currently no items in your cart. Take a look around the site and see what you like!'
-      //   buyNow.style.display = 'hidden'
-      // } else {
-      //   console.log(data)
-      //   console.log(data.length)
-      //   alert.textContent = `Items in cart: ${data.length}`
-      //   buyNow.style.display = 'block'
-      // }
-      // document.getElementById('listItems').innerHTML = ''
-      // data.forEach(item => {
-      //   console.log(item)
-      //   let itemElem = document.createElement('div')
-      //   itemElem.className = 'card'
-      //   itemElem.innerHTML = `
-      //   <a href="#">
-      //     <div class="card-image">
-      //       <img src="${item.productUrl}">
-      //       <span class="card-title">${item.title}</span>
-      //     </div>
-      //       <div class="card-content">
-      //         <p>ARTIST: ${item.artistName}</p>
-      //         <p>CATEGORY: ${item.category}</p>
-      //         <p>PRICE: ${item.price} USD</p>
-      //       </div>
-      //   </a>
-      // <a href="#">
-      // <div class="card-action">
-      //   <span style='color:red' data-id={{id}}>Delete</span>
-      // </div>
-      // </a>`
-      //   document.getElementById('listItems').append(itemElem)
-      // })
+      if (data === null) {
+        const buyNow = document.getElementById('buyNow')
+        const alert = document.getElementById('cartAlert')
+        alert.textContent = 'There are currently no items in your cart. Take a look around the site and see what you like!'
+        buyNow.style.display = 'none'
+      } else {
+        console.log(data)
+        console.log(data.length)
+        alert.textContent = `Items in cart: ${data.length}`
+        buyNow.style.display = 'block'
+      document.getElementById('listItems').innerHTML = ''
+      data.forEach(item => {
+        console.log(item)
+        let itemElem = document.createElement('div')
+        itemElem.className = 'card'
+        itemElem.innerHTML = `
+        <a href="#">
+          <div class="card-image">
+            <img src="${item.productUrl}">
+            <span class="card-title">${item.title}</span>
+          </div>
+            <div class="card-content">
+              <p>ARTIST: ${item.artistName}</p>
+              <p>CATEGORY: ${item.category}</p>
+              <p>PRICE: ${item.price} USD</p>
+            </div>
+        </a>
+      <a href="#">
+      <div class="card-action">
+        <span style='color:red' data-id={{id}}>Delete</span>
+      </div>
+      </a>`
+        document.getElementById('listItems').append(itemElem)
+        })
+      }
     })
     .catch(err => console.log(err))
 }
